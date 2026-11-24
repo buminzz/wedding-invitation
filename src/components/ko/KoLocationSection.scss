@@ -1,0 +1,116 @@
+@use '../../styles/variables' as *;
+
+.ko-location-section {
+  .venue-summary {
+    text-align: center;
+    margin-bottom: 24px;
+
+    .name {
+      font-family: $font-serif-kr;
+      font-size: 1.12rem;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .addr {
+      font-size: 0.9rem;
+      color: $color-text-secondary;
+      margin-bottom: 4px;
+    }
+
+    .tel {
+      font-size: 0.82rem;
+      color: $color-text-muted;
+      margin-bottom: 16px;
+    }
+
+    .copy-addr-btn {
+      padding: 0 20px;
+      height: 44px;
+      border: 1px solid $color-border;
+      background-color: $color-bg-card;
+      border-radius: 2px;
+      font-size: 0.84rem;
+    }
+  }
+
+  .map-placeholder {
+    height: 200px;
+    border: 1px solid $color-border;
+    background-color: #e9e4dc;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+
+    .pin {
+      background-color: $color-bg-card;
+      border: 1px solid $color-accent;
+      padding: 10px 18px;
+      border-radius: 999px;
+      text-align: center;
+
+      strong {
+        display: block;
+        font-family: $font-serif-kr;
+        font-size: 0.9rem;
+      }
+
+      span {
+        font-size: 0.76rem;
+        color: $color-text-muted;
+      }
+    }
+  }
+
+  .app-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 32px;
+
+    a {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-bg-card;
+      border: 1px solid $color-border;
+      border-radius: 2px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: $color-text-primary;
+    }
+  }
+
+  .transport-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-top: 1px solid $color-border;
+    padding-top: 24px;
+
+    .block {
+      h3 {
+        font-family: $font-serif-kr;
+        font-size: 0.94rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        li {
+          font-size: 0.86rem;
+          color: $color-text-secondary;
+        }
+      }
+    }
+  }
+}

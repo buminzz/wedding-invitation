@@ -1,0 +1,78 @@
+@use '../../styles/variables' as *;
+
+.ko-account-section {
+  .intro-note {
+    text-align: center;
+    font-size: 0.88rem;
+    color: $color-text-secondary;
+    white-space: pre-line;
+    margin-bottom: 28px;
+  }
+
+  .group-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .group-card {
+    border: 1px solid $color-border;
+    background-color: $color-bg-card;
+    border-radius: 2px;
+
+    .trigger {
+      width: 100%;
+      height: 52px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: $font-serif-kr;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .panel {
+      border-top: 1px solid $color-border;
+      padding: 8px 20px 14px;
+      background-color: #fdfcfa;
+    }
+
+    .acc-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px dashed $color-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .who {
+        font-size: 0.82rem;
+        color: $color-text-muted;
+
+        strong {
+          color: $color-text-primary;
+          margin-left: 6px;
+        }
+      }
+
+      .num {
+        font-size: 0.9rem;
+        color: $color-text-primary;
+      }
+
+      .copy-btn {
+        height: 44px;
+        padding: 0 14px;
+        border: 1px solid $color-border;
+        background-color: $color-bg-sub;
+        border-radius: 2px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

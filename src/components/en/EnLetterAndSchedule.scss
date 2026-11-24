@@ -1,0 +1,100 @@
+@use '../../styles/variables' as *;
+
+.en-letter-section {
+  .salutation {
+    font-family: $font-serif-en;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: $color-text-primary;
+    margin-bottom: 16px;
+  }
+
+  .letter-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    p {
+      font-size: 0.94rem;
+      line-height: 1.85;
+      color: $color-text-secondary;
+    }
+  }
+
+  .sign-off-line {
+    font-family: $font-serif-en;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: $color-text-primary;
+    margin-bottom: 10px;
+  }
+
+  .parents-credit {
+    font-size: 0.8rem;
+    line-height: 1.65;
+    color: $color-text-muted;
+    padding-bottom: 36px;
+    border-bottom: 1px solid $color-border;
+    margin-bottom: 36px;
+  }
+
+  .schedule-subhead {
+    text-align: center;
+    margin-bottom: 22px;
+
+    .kicker {
+      display: block;
+      font-family: $font-serif-en;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      color: $color-accent;
+    }
+
+    h3 {
+      font-family: $font-serif-en;
+      font-size: 1.45rem;
+      font-weight: 400;
+    }
+  }
+
+  .schedule-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .row {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 14px;
+      padding: 14px 16px;
+      background-color: $color-bg-card;
+      border: 1px solid $color-border;
+      border-radius: 2px;
+
+      .time {
+        font-family: $font-serif-en;
+        font-size: 1rem;
+        color: $color-accent;
+        padding-top: 2px;
+      }
+
+      .title {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: $color-text-primary;
+      }
+
+      .loc {
+        font-size: 0.82rem;
+        color: $color-text-secondary;
+      }
+
+      .note {
+        font-size: 0.78rem;
+        color: $color-text-muted;
+        margin-top: 2px;
+      }
+    }
+  }
+}

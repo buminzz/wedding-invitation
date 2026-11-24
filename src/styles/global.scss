@@ -1,0 +1,181 @@
+@use './variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  touch-action: pan-x pan-y;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: $color-bg-outer;
+  color: $color-text-primary;
+  font-family: $font-sans;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  min-height: 44px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+input {
+  font-size: 16px;
+}
+.app-viewport {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $color-bg-outer;
+}
+
+.mobile-container {
+  width: 100%;
+  max-width: $mobile-max-width;
+  min-width: 320px;
+  background-color: $color-bg-main;
+  box-shadow: 0 12px 48px rgba(38, 37, 35, 0.08);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.edition-switcher-bar {
+  display: flex;
+  padding: 24px 28px 0;
+  gap: 8px;
+  // grid-template-columns: 1fr 1fr;
+  // background-color: $color-bg-sub;
+  // border-bottom: 1px solid $color-border;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  .edition-link-btn {
+    font-family: $font-serif-en;
+    // height: 44px;
+    min-height: auto;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    color: $color-text-muted;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease,
+      background-color 0.2s ease;
+
+    &.is-active {
+      color: $color-text-primary;
+      font-weight: 600;
+      background-color: $color-bg-main;
+      border-bottom-color: $color-accent;
+    }
+  }
+}
+
+.section-wrapper {
+  padding: $section-padding-y $section-padding-x;
+  position: relative;
+
+  &.alt-bg {
+    background-color: $color-bg-sub;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 36px;
+
+  .en-subtitle {
+    display: block;
+    font-family: $font-serif-en;
+    font-size: 0.85rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: $color-accent;
+    margin-bottom: 6px;
+  }
+
+  .ko-title {
+    font-family: $font-serif-kr;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: $color-text-primary;
+  }
+
+  .en-title {
+    font-family: $font-serif-en;
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: $color-text-primary;
+  }
+}
+
+.fade-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-banner {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(16px);
+  background-color: rgba(38, 37, 35, 0.92);
+  color: #faf8f5;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: -0.01em;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+
+  &.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

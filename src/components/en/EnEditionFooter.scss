@@ -1,0 +1,71 @@
+@use '../../styles/variables' as *;
+
+.en-footer {
+  padding: 48px $section-padding-x 60px;
+  text-align: center;
+  border-top: 1px solid $color-border;
+  background-color: $color-bg-main;
+
+  .gift-note {
+    font-family: $font-serif-en;
+    font-style: italic;
+    font-size: 1.02rem;
+    color: $color-text-secondary;
+    margin-bottom: 24px;
+  }
+
+  .share-link-btn {
+    width: 100%;
+    height: 46px;
+    border: 1px solid $color-border;
+    background-color: $color-bg-card;
+    border-radius: 2px;
+    font-size: 0.86rem;
+    margin-bottom: 32px;
+  }
+
+  .monogram {
+    font-family: $font-serif-en;
+    font-size: 0.84rem;
+    letter-spacing: 0.24em;
+    color: $color-text-muted;
+  }
+}
+
+footer.en-footer {
+  background-color: #f3efe9;
+}
+
+.popup-close {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  min-height: 12px;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: $color-text-muted;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: $color-text-muted;
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+}

@@ -1,0 +1,59 @@
+@use '../../styles/variables' as *;
+
+.ko-greeting-section {
+  text-align: center;
+
+  .ko-greeting-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+
+    p {
+      font-family: $font-serif-kr;
+      font-size: 0.94rem;
+      line-height: 2.05;
+      color: $color-text-secondary;
+      white-space: pre-line;
+    }
+  }
+
+  .ko-family-box {
+    background-color: $color-bg-card;
+    border: 1px solid $color-border;
+    border-radius: 2px;
+    padding: 22px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .row {
+      font-family: $font-serif-kr;
+      font-size: 0.94rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+
+      &:first-child {
+        .parents {
+          font-size: 0.74rem;
+        }
+      }
+
+      .parents {
+        font-weight: 500;
+      }
+
+      .relation {
+        font-size: 0.84rem;
+        color: $color-text-muted;
+      }
+
+      .child {
+        font-weight: 600;
+      }
+    }
+  }
+}

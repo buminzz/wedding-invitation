@@ -1,0 +1,116 @@
+@use '../../styles/variables' as *;
+
+.en-lookbook-section {
+  .editorial-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .editorial-card {
+    background-color: $color-bg-card;
+    border: 1px solid $color-border;
+    border-radius: 2px;
+    overflow: hidden;
+
+    .card-img-btn {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      padding: 0;
+      display: block;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.03);
+      }
+    }
+
+    .card-caption {
+      padding: 12px 16px;
+      font-family: $font-serif-en;
+      font-style: italic;
+      font-size: 0.96rem;
+      color: $color-text-secondary;
+    }
+  }
+}
+
+.en-lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(24, 23, 22, 0.95);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 16px 32px;
+  color: #faf8f5;
+
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+
+    span {
+      font-family: $font-serif-en;
+      letter-spacing: 0.16em;
+    }
+
+    button {
+      width: 44px;
+      height: 44px;
+      font-size: 1.5rem;
+      color: #faf8f5;
+    }
+  }
+
+  .frame {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      max-height: 72vh;
+      object-fit: contain;
+    }
+
+    .step-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: rgba(38, 37, 35, 0.65);
+      color: #faf8f5;
+      font-size: 1.2rem;
+
+      &.prev {
+        left: 4px;
+      }
+
+      &.next {
+        right: 4px;
+      }
+    }
+  }
+
+  .cap {
+    text-align: center;
+    font-family: $font-serif-en;
+    font-style: italic;
+    font-size: 1rem;
+    color: rgba(250, 248, 245, 0.82);
+  }
+}
